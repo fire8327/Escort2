@@ -62,7 +62,9 @@
             <div class="w-full lg:w-4/5 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
                 <div class="flex flex-col gap-4 p-3.5 bg-white rounded-[20px]">
                     <div class="relative rounded-[20px] overflow-hidden border border-[#EDCEBF]/50">
-                        <img src="Assets/Images/card/main.png" alt="" class="w-full">
+                        <a href="" class="w-full">
+                            <img src="Assets/Images/card/main.png" alt="" class="w-full">
+                        </a>
                         <button class="absolute left-0 top-0 bg-[#EDCEBF] px-4 py-1.5 rounded-md rounded-br-[20px]">
                             <img src="Assets/Images/card/video.png" alt="">
                         </button>
@@ -71,7 +73,7 @@
                         </div>
                     </div>
                     <div class="flex items-center justify-between">
-                        <h2 class="text-xl md:text-2xl xl:text-3xl pr-12 border-b border-[#737373] w-fit">Полина</h2>
+                        <a href="" class="text-xl md:text-2xl xl:text-3xl pr-12 border-b border-[#737373] w-fit">Полина</a>
                         <button>
                             <img src="Assets/Images/card/star.png" alt="">
                         </button>
@@ -99,7 +101,116 @@
                     </div>
                 </div>
             </div>
-            <div class="w-full lg:w-1/5"></div>
+            <div class="w-full lg:w-1/5 flex flex-col gap-7 p-4 bg-white rounded-[20px] border border-[#EDCEBF] h-fit">
+                <button class="flex items-center justify-between" id="filterToggler">
+                    <span class="text-lg md:text-xl xl:text-2xl">Фильтр</span>
+                    <img src="Assets/Images/filter/down.svg" alt="" class="w-7 transition-all duration-500 rotate-180">
+                </button>
+                <div id="filterList">
+                    <div class="flex flex-col gap-7">
+                        <div class="flex flex-col gap-2.5">
+                            <p class="text-lg md:text-xl xl:text-2xl border-b border-[#737373]">Цены</p>
+                            <ul class="list-inside list-disc text-[#737373]">
+                                <li><a href="#">1000 (кол-во)</a></li>
+                                <li><a href="#">1500 (кол-во)</a></li>
+                                <li><a href="#">2000 (кол-во)</a></li>
+                                <li><a href="#">2500 (кол-во)</a></li>
+                                <li><a href="#">3000 (кол-во)</a></li>
+                                <li><a href="#">>3500 (кол-во)</a></li>
+                            </ul>
+                        </div>
+                        <div class="flex flex-col gap-2.5">
+                            <p class="text-lg md:text-xl xl:text-2xl border-b border-[#737373]">Возраст</p>
+                            <ul class="list-inside list-disc text-[#737373]">
+                                <li><a href="#">18-20 (кол-во)</a></li>
+                                <li><a href="#">20-30 (кол-во)</a></li>
+                                <li><a href="#">30-40 (кол-во)</a></li>
+                                <li><a href="#">40-50 (кол-во)</a></li>
+                                <li><a href="#">>50 (кол-во)</a></li>
+                            </ul>
+                        </div>
+                        <div class="flex flex-col gap-4">
+                            <div class="flex flex-col gap-2.5">
+                                <p class="text-base md:text-lg xl:text-xl text-[#6C6C6C]">Фигура</p>
+                                <ul class="list-inside list-disc text-[#737373]">
+                                    <li><a href="#">худые (кол-во)</a></li>
+                                    <li><a href="#">спортивные (кол-во)</a></li>
+                                    <li><a href="#">толстые (кол-во)</a></li>
+                                </ul>
+                            </div>
+                            <div class="flex flex-col gap-2.5">
+                                <p class="text-base md:text-lg xl:text-xl text-[#6C6C6C]">Рост</p>
+                                <ul class="list-inside list-disc text-[#737373]">
+                                    <li><a href="#">низкие (кол-во)</a></li>
+                                    <li><a href="#">средние (кол-во)</a></li>
+                                    <li><a href="#">высокие (кол-во)</a></li>
+                                </ul>
+                            </div>
+                            <div class="flex flex-col gap-2.5">
+                                <p class="text-base md:text-lg xl:text-xl text-[#6C6C6C]">Грудь</p>
+                                <ul class="list-inside list-disc text-[#737373]">
+                                    <li><a href="#">1 размер (кол-во)</a></li>
+                                    <li><a href="#">2 размер (кол-во)</a></li>
+                                    <li><a href="#">3 размер (кол-во)</a></li>
+                                    <li><a href="#">4 размер (кол-во)</a></li>
+                                    <li><a href="#">5 размер (кол-во)</a></li>
+                                    <li><a href="#">>5 (кол-во)</a></li>
+                                </ul>
+                            </div>
+                            <div class="flex flex-col gap-2.5">
+                                <p class="text-base md:text-lg xl:text-xl text-[#6C6C6C]">Цвет волос</p>
+                                <ul class="list-inside list-disc text-[#737373]">
+                                    <li><a href="#">рыжие (кол-во)</a></li>
+                                    <li><a href="#">брюнетки (кол-во)</a></li>
+                                    <li><a href="#">блондинки (кол-во)</a></li>
+                                    <li><a href="#">русые (кол-во)</a></li>
+                                    <li><a href="#">другое (кол-во)</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-2.5">
+                            <p class="text-lg md:text-xl xl:text-2xl border-b border-[#737373]">Национальность</p>
+                            <ul class="list-inside list-disc text-[#737373]">
+                                <li><a href="#">славянки (кол-во)</a></li>
+                                <li><a href="#">азиатки (кол-во)</a></li>
+                                <li><a href="#">европейки (кол-во)</a></li>
+                                <li><a href="#">негритянки (кол-во)</a></li>
+                            </ul>
+                        </div>
+                        <div class="flex flex-col gap-2.5">
+                            <p class="text-lg md:text-xl xl:text-2xl border-b border-[#737373]">Станции метро</p>
+                            <ul class="list-inside list-disc text-[#737373]">                  
+                                <li><a href="#">Красногвардейская (кол-во)</a></li>
+                                <li><a href="#">Академческая (кол-во)</a></li>
+                                <li><a href="#">Алексеевская (кол-во)</a></li>
+                                <li><a href="#">Другое (кол-во)</a></li>
+                            </ul>
+                        </div>
+                        <div class="flex flex-col gap-2.5">
+                            <p class="text-lg md:text-xl xl:text-2xl border-b border-[#737373]">Дополнительно</p>
+                            <ul class="list-inside list-disc text-[#737373]">
+                                <li><a href="#">татуировки (кол-во)</a></li>
+                                <li><a href="#">пирсинг (кол-во)</a></li>
+                                <li><a href="#">беременные (кол-во)</a></li>
+                                <li><a href="#">не салон (кол-во)</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flex items-center justify-center gap-4">
+            <button><</button>
+            <button><<</button>
+            <a href="#">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#">5</a>
+            <p>...</p>
+            <a href="#">60</a>
+            <button>></button>
+            <button>>></button>
         </div>
     </main>
 

@@ -38,3 +38,10 @@ window.onscroll = function () {
 function goToTop() {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
+
+
+/* filter */
+$("#filterToggler").click(() => {
+  $("#filterToggler").find("img").toggleClass("rotate-180")
+  $("#filterList").slideToggle()
+})
