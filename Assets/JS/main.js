@@ -24,6 +24,26 @@ const swiper = new Swiper('.nav-slider', {
         }
     }
 });
+/* advice-slider */
+const swiper2 = new Swiper('.advice-slider', {
+  loop: true,
+  navigation: {
+    nextEl: '.advice-next',
+    prevEl: '.advice-prev',
+  },
+  spaceBetween: 20,
+  breakpoints: {
+      320: {
+        slidesPerView: 1,
+      },
+      768: {
+        slidesPerView: 2,
+      },
+      1280: {
+        slidesPerView: 3,
+      }
+  }
+});
 
 
 /* back to top */

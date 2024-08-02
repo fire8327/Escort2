@@ -3,9 +3,576 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Анкета девушки</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="Assets/CSS/output.css">
 </head>
-<body>
+<body class="flex flex-col min-h-screen bg-[#EEE3DE87]">
+    <header class="w-full py-4 lg:py-7 grid-container bg-white border-b border-[#EDCEBF]">
+        <div class="flex flex-col gap-1.5 w-full max-lg:relative">
+            <div class="flex items-center justify-between w-full">
+                <a href="index.html" class="flex items-center gap-7">
+                    <img src="Assets/Images/header/logo.png" alt="" class="w-10 md:w-12 xl:w-16">
+                    <span class="max-lg:hidden text-xl md:text-2xl xl:text-3xl">Название компании</span>
+                </a>
+                <form id="search" action="#" class="max-lg:absolute max-lg:w-full max-lg:z-[4] lg:relative transition-all duration-500 max-lg:-translate-y-[500px]">
+                    <input type="text" class="w-full lg:w-[460px] text-base py-3.5 pl-7 pr-24 lg:pr-12 border border-[#EDCEBF] rounded-[20px]" placeholder="Поиск по имени, телефону, району, ...">
+                    <div class="flex items-center gap-4 absolute top-1/2 -translate-y-1/2 right-5">
+                        <button>
+                            <img src="Assets/Images/header/search.png" alt="" class="w-6">
+                        </button>
+                        <button id="searchClose" class="lg:hidden">
+                            <img src="Assets/Images/header/close.svg" alt="" class="w-7">
+                        </button>
+                    </div>
+                </form>
+                <div class="flex items-center gap-4 lg:hidden">
+                    <button id="searchToggler">
+                        <img src="Assets/Images/header/search.png" alt="" class="w-6">
+                    </button>
+                    <button class="flex flex-col gap-1">
+                        <span class="w-7 h-1 rounded-full bg-[#EDCEBF]"></span>
+                        <span class="w-7 h-1 rounded-full bg-[#EDCEBF]"></span>
+                        <span class="w-7 h-1 rounded-full bg-[#EDCEBF]"></span>
+                    </button>
+                </div>
+            </div>
+            <p class="text-2xl md:text-3xl xl:text-4xl text-center lg:hidden">Название компании</p>
+        </div>
+    </header>
+
+    <div id="overlay" class="fixed inset-0 bg-black/30 z-[3] hidden lg:hidden"></div>
+
+    <main class="grid-container w-full gap-y-14 md:gap-y-16 xl:gap-y-20 grow my-10">
+        <div class="w-full p-4 rounded-xl bg-white border border-[#EDCEBF] flex flex-col gap-6 h-fit">
+            <nav class="flex items-center gap-1.5 w-full">
+                <button class="w-10 h-10 flex items-center justify-center border border-[#EDCEBF] rounded-xl p-2 shrink-0 nav-prev">
+                    <img src="Assets/Images/nav/left.svg" alt="">
+                </button>
+                <div class="swiper nav-slider text-lg md:text-xl xl:text-2xl grow text-white">
+                    <div class="swiper-wrapper">
+                        <a href="#" class="swiper-slide h-10 flex items-center justify-center px-2 border border-[#EDCEBF] bg-[#EDCEBF] rounded-xl nav-active">Все анкеты</a>
+                        <a href="#" class="swiper-slide h-10 flex items-center justify-center px-2 border border-[#EDCEBF] bg-[#EDCEBF] rounded-xl">Индивидуалки</a>
+                        <a href="#" class="swiper-slide h-10 flex items-center justify-center px-2 border border-[#EDCEBF] bg-[#EDCEBF] rounded-xl">Популярное</a>
+                        <a href="#" class="swiper-slide h-10 flex items-center justify-center px-2 border border-[#EDCEBF] bg-[#EDCEBF] rounded-xl">БДСМ</a>
+                        <a href="#" class="swiper-slide h-10 flex items-center justify-center px-2 border border-[#EDCEBF] bg-[#EDCEBF] rounded-xl">Новые</a>
+                        <a href="#" class="swiper-slide h-10 flex items-center justify-center px-2 border border-[#EDCEBF] bg-[#EDCEBF] rounded-xl">Ждут звонка</a>
+                        <a href="#" class="swiper-slide h-10 flex items-center justify-center px-2 border border-[#EDCEBF] bg-[#EDCEBF] rounded-xl nav-active">Все анкеты</a>
+                        <a href="#" class="swiper-slide h-10 flex items-center justify-center px-2 border border-[#EDCEBF] bg-[#EDCEBF] rounded-xl">Индивидуалки</a>
+                        <a href="#" class="swiper-slide h-10 flex items-center justify-center px-2 border border-[#EDCEBF] bg-[#EDCEBF] rounded-xl">Популярное</a>
+                        <a href="#" class="swiper-slide h-10 flex items-center justify-center px-2 border border-[#EDCEBF] bg-[#EDCEBF] rounded-xl">БДСМ</a>
+                        <a href="#" class="swiper-slide h-10 flex items-center justify-center px-2 border border-[#EDCEBF] bg-[#EDCEBF] rounded-xl">Новые</a>
+                        <a href="#" class="swiper-slide h-10 flex items-center justify-center px-2 border border-[#EDCEBF] bg-[#EDCEBF] rounded-xl">Ждут звонка</a>
+                    </div>
+                </div>
+                <button class="w-10 h-10 flex items-center justify-center border border-[#EDCEBF] rounded-xl p-2 shrink-0 nav-next">
+                    <img src="Assets/Images/nav/left.svg" alt="" class="scale-[-1]">
+                </button>
+            </nav>
+            <!-- <h1 class="text-2xl md:text-3xl xl:text-4xl pr-12 border-b border-[#737373] w-fit">Главная</h1> -->
+        </div>
+        <div class="flex flex-col gap-7">
+            <h2 class="text-xl md:text-2xl xl:text-3xl text-center">Ждут звонка</h2>
+            <div class="flex items-center gap-6 md:gap-8 xl:gap-12">
+                <button class="w-10 h-10 flex items-center justify-center border border-[#EDCEBF] rounded-xl p-2 shrink-0 advice-prev">
+                    <img src="Assets/Images/nav/left.svg" alt="">
+                </button>
+                <div class="swiper grow advice-slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide flex flex-col gap-4 p-3.5 bg-white rounded-[20px] h-fit">
+                            <div class="relative rounded-[20px] overflow-hidden border border-[#EDCEBF]/50">
+                                <a href="card_page.html" class="w-full">
+                                    <img src="Assets/Images/card/main.png" alt="" class="w-full">
+                                </a>
+                                <button class="absolute left-0 top-0 bg-[#EDCEBF] px-4 py-1.5 rounded-md rounded-br-[20px]">
+                                    <img src="Assets/Images/card/video.png" alt="">
+                                </button>
+                                <div class="absolute left-0 bottom-0 bg-white px-4 py-1.5 rounded-md rounded-tr-[20px]">
+                                    <img src="Assets/Images/card/check.png" alt="">
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <a href="card_page.html" class="text-xl md:text-2xl xl:text-3xl pr-12 border-b border-[#737373] w-fit">Полина</a>
+                                <button>
+                                    <img src="Assets/Images/card/star.png" alt="">
+                                </button>
+                            </div>
+                            <div class="grid grid-cols-4 gap-5 text-base leading-4">
+                                <p class="rounded-[10px] border border-[#EDCEBF] py-1 px-3 text-center">23 <br> года</p>
+                                <p class="rounded-[10px] border border-[#EDCEBF] py-1 px-3 text-center">55 <br> кг</p>
+                                <p class="rounded-[10px] border border-[#EDCEBF] py-1 px-3 text-center">170 <br> см</p>
+                                <p class="rounded-[10px] border border-[#EDCEBF] py-1 px-3 text-center">3 <br> р-р</p>
+                            </div>
+                            <div class="flex flex-col w-full tab-main">
+                                <ul class="flex items-center justify-between text-base">
+                                    <li class="flex items-center justify-center text-center w-2/5 border-t border-x border-[#EDCEBF] bg-[#EDCEBF] text-white rounded-t-[10px] tab-toggler"><a href="" class="py-3.5 w-full">Апартаменты</a></li>
+                                    <li class="flex items-center justify-center text-center w-2/5 border-t border-x border-[#EDCEBF] bg-[#EDCEBF] text-white rounded-t-[10px] tab-toggler"><a href="" class="py-3.5 w-full">На выезд</a></li>
+                                </ul>
+                                <div class="flex items-center gap-4 justify-between px-4 py-2 text-center text-md md:text-lg xl:text-xl border border-[#EDCEBF] rounded-b-[20px] tab-card">
+                                    <div class="flex flex-col gap-2 items-center">
+                                        <p class="text-[#737373]">1 час:</p>
+                                        <p>4000</p>
+                                    </div>
+                                    <div class="w-px h-14 bg-[#737373]"></div>
+                                    <div class="flex flex-col gap-2 items-center">
+                                        <p class="text-[#737373]">2 часа:</p>
+                                        <p>8000</p>
+                                    </div>
+                                    <div class="w-px h-14 bg-[#737373]"></div>
+                                    <div class="flex flex-col gap-2 items-center">
+                                        <p class="text-[#737373]">Ночь:</p>
+                                        <p>20000</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-4 justify-between px-4 py-2 text-center text-md md:text-lg xl:text-xl border border-[#EDCEBF] rounded-b-[20px] tab-card">
+                                    <div class="flex flex-col gap-2 items-center">
+                                        <p class="text-[#737373]">1 час:</p>
+                                        <p>4002</p>
+                                    </div>
+                                    <div class="w-px h-14 bg-[#737373]"></div>
+                                    <div class="flex flex-col gap-2 items-center">
+                                        <p class="text-[#737373]">2 часа:</p>
+                                        <p>8002</p>
+                                    </div>
+                                    <div class="w-px h-14 bg-[#737373]"></div>
+                                    <div class="flex flex-col gap-2 items-center">
+                                        <p class="text-[#737373]">Ночь:</p>
+                                        <p>20002</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="flex items-center gap-2.5">
+                                <img src="Assets/Images/card/locate.png" alt="">
+                                <span class="text-[#B0B0B0] text-base md:text-lg xl:text-xl">м.Красногвардейская </span>
+                            </button>
+                            <div class="flex items-center justify-between p-3.5 text-base md:text-lg xl:text-xl rounded-[20px] border border-[#EDCEBF]">
+                                <a href="tel:+77011234567">+7 (701) 123 45 67</a>
+                                <div class="flex items-center gap-2">
+                                    <a href="#">
+                                        <img src="Assets/Images/card/tg.png" alt="" class="w-6">
+                                    </a>
+                                    <a href="#">
+                                        <img src="Assets/Images/card/whatsapp.png" alt="" class="w-6">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide flex flex-col gap-4 p-3.5 bg-white rounded-[20px] h-fit">
+                            <div class="relative rounded-[20px] overflow-hidden border border-[#EDCEBF]/50">
+                                <a href="card_page.html" class="w-full">
+                                    <img src="Assets/Images/card/main.png" alt="" class="w-full">
+                                </a>
+                                <button class="absolute left-0 top-0 bg-[#EDCEBF] px-4 py-1.5 rounded-md rounded-br-[20px]">
+                                    <img src="Assets/Images/card/video.png" alt="">
+                                </button>
+                                <div class="absolute left-0 bottom-0 bg-white px-4 py-1.5 rounded-md rounded-tr-[20px]">
+                                    <img src="Assets/Images/card/check.png" alt="">
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <a href="card_page.html" class="text-xl md:text-2xl xl:text-3xl pr-12 border-b border-[#737373] w-fit">Полина</a>
+                                <button>
+                                    <img src="Assets/Images/card/star.png" alt="">
+                                </button>
+                            </div>
+                            <div class="grid grid-cols-4 gap-5 text-base leading-4">
+                                <p class="rounded-[10px] border border-[#EDCEBF] py-1 px-3 text-center">23 <br> года</p>
+                                <p class="rounded-[10px] border border-[#EDCEBF] py-1 px-3 text-center">55 <br> кг</p>
+                                <p class="rounded-[10px] border border-[#EDCEBF] py-1 px-3 text-center">170 <br> см</p>
+                                <p class="rounded-[10px] border border-[#EDCEBF] py-1 px-3 text-center">3 <br> р-р</p>
+                            </div>
+                            <div class="flex flex-col w-full tab-main">
+                                <ul class="flex items-center justify-between text-base">
+                                    <li class="flex items-center justify-center text-center w-2/5 border-t border-x border-[#EDCEBF] bg-[#EDCEBF] text-white rounded-t-[10px] tab-toggler"><a href="" class="py-3.5 w-full">Апартаменты</a></li>
+                                    <li class="flex items-center justify-center text-center w-2/5 border-t border-x border-[#EDCEBF] bg-[#EDCEBF] text-white rounded-t-[10px] tab-toggler"><a href="" class="py-3.5 w-full">На выезд</a></li>
+                                </ul>
+                                <div class="flex items-center gap-4 justify-between px-4 py-2 text-center text-md md:text-lg xl:text-xl border border-[#EDCEBF] rounded-b-[20px] tab-card">
+                                    <div class="flex flex-col gap-2 items-center">
+                                        <p class="text-[#737373]">1 час:</p>
+                                        <p>4000</p>
+                                    </div>
+                                    <div class="w-px h-14 bg-[#737373]"></div>
+                                    <div class="flex flex-col gap-2 items-center">
+                                        <p class="text-[#737373]">2 часа:</p>
+                                        <p>8000</p>
+                                    </div>
+                                    <div class="w-px h-14 bg-[#737373]"></div>
+                                    <div class="flex flex-col gap-2 items-center">
+                                        <p class="text-[#737373]">Ночь:</p>
+                                        <p>20000</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-4 justify-between px-4 py-2 text-center text-md md:text-lg xl:text-xl border border-[#EDCEBF] rounded-b-[20px] tab-card">
+                                    <div class="flex flex-col gap-2 items-center">
+                                        <p class="text-[#737373]">1 час:</p>
+                                        <p>4002</p>
+                                    </div>
+                                    <div class="w-px h-14 bg-[#737373]"></div>
+                                    <div class="flex flex-col gap-2 items-center">
+                                        <p class="text-[#737373]">2 часа:</p>
+                                        <p>8002</p>
+                                    </div>
+                                    <div class="w-px h-14 bg-[#737373]"></div>
+                                    <div class="flex flex-col gap-2 items-center">
+                                        <p class="text-[#737373]">Ночь:</p>
+                                        <p>20002</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="flex items-center gap-2.5">
+                                <img src="Assets/Images/card/locate.png" alt="">
+                                <span class="text-[#B0B0B0] text-base md:text-lg xl:text-xl">м.Красногвардейская </span>
+                            </button>
+                            <div class="flex items-center justify-between p-3.5 text-base md:text-lg xl:text-xl rounded-[20px] border border-[#EDCEBF]">
+                                <a href="tel:+77011234567">+7 (701) 123 45 67</a>
+                                <div class="flex items-center gap-2">
+                                    <a href="#">
+                                        <img src="Assets/Images/card/tg.png" alt="" class="w-6">
+                                    </a>
+                                    <a href="#">
+                                        <img src="Assets/Images/card/whatsapp.png" alt="" class="w-6">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide flex flex-col gap-4 p-3.5 bg-white rounded-[20px] h-fit">
+                            <div class="relative rounded-[20px] overflow-hidden border border-[#EDCEBF]/50">
+                                <a href="card_page.html" class="w-full">
+                                    <img src="Assets/Images/card/main.png" alt="" class="w-full">
+                                </a>
+                                <button class="absolute left-0 top-0 bg-[#EDCEBF] px-4 py-1.5 rounded-md rounded-br-[20px]">
+                                    <img src="Assets/Images/card/video.png" alt="">
+                                </button>
+                                <div class="absolute left-0 bottom-0 bg-white px-4 py-1.5 rounded-md rounded-tr-[20px]">
+                                    <img src="Assets/Images/card/check.png" alt="">
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <a href="card_page.html" class="text-xl md:text-2xl xl:text-3xl pr-12 border-b border-[#737373] w-fit">Полина</a>
+                                <button>
+                                    <img src="Assets/Images/card/star.png" alt="">
+                                </button>
+                            </div>
+                            <div class="grid grid-cols-4 gap-5 text-base leading-4">
+                                <p class="rounded-[10px] border border-[#EDCEBF] py-1 px-3 text-center">23 <br> года</p>
+                                <p class="rounded-[10px] border border-[#EDCEBF] py-1 px-3 text-center">55 <br> кг</p>
+                                <p class="rounded-[10px] border border-[#EDCEBF] py-1 px-3 text-center">170 <br> см</p>
+                                <p class="rounded-[10px] border border-[#EDCEBF] py-1 px-3 text-center">3 <br> р-р</p>
+                            </div>
+                            <div class="flex flex-col w-full tab-main">
+                                <ul class="flex items-center justify-between text-base">
+                                    <li class="flex items-center justify-center text-center w-2/5 border-t border-x border-[#EDCEBF] bg-[#EDCEBF] text-white rounded-t-[10px] tab-toggler"><a href="" class="py-3.5 w-full">Апартаменты</a></li>
+                                    <li class="flex items-center justify-center text-center w-2/5 border-t border-x border-[#EDCEBF] bg-[#EDCEBF] text-white rounded-t-[10px] tab-toggler"><a href="" class="py-3.5 w-full">На выезд</a></li>
+                                </ul>
+                                <div class="flex items-center gap-4 justify-between px-4 py-2 text-center text-md md:text-lg xl:text-xl border border-[#EDCEBF] rounded-b-[20px] tab-card">
+                                    <div class="flex flex-col gap-2 items-center">
+                                        <p class="text-[#737373]">1 час:</p>
+                                        <p>4000</p>
+                                    </div>
+                                    <div class="w-px h-14 bg-[#737373]"></div>
+                                    <div class="flex flex-col gap-2 items-center">
+                                        <p class="text-[#737373]">2 часа:</p>
+                                        <p>8000</p>
+                                    </div>
+                                    <div class="w-px h-14 bg-[#737373]"></div>
+                                    <div class="flex flex-col gap-2 items-center">
+                                        <p class="text-[#737373]">Ночь:</p>
+                                        <p>20000</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-4 justify-between px-4 py-2 text-center text-md md:text-lg xl:text-xl border border-[#EDCEBF] rounded-b-[20px] tab-card">
+                                    <div class="flex flex-col gap-2 items-center">
+                                        <p class="text-[#737373]">1 час:</p>
+                                        <p>4002</p>
+                                    </div>
+                                    <div class="w-px h-14 bg-[#737373]"></div>
+                                    <div class="flex flex-col gap-2 items-center">
+                                        <p class="text-[#737373]">2 часа:</p>
+                                        <p>8002</p>
+                                    </div>
+                                    <div class="w-px h-14 bg-[#737373]"></div>
+                                    <div class="flex flex-col gap-2 items-center">
+                                        <p class="text-[#737373]">Ночь:</p>
+                                        <p>20002</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="flex items-center gap-2.5">
+                                <img src="Assets/Images/card/locate.png" alt="">
+                                <span class="text-[#B0B0B0] text-base md:text-lg xl:text-xl">м.Красногвардейская </span>
+                            </button>
+                            <div class="flex items-center justify-between p-3.5 text-base md:text-lg xl:text-xl rounded-[20px] border border-[#EDCEBF]">
+                                <a href="tel:+77011234567">+7 (701) 123 45 67</a>
+                                <div class="flex items-center gap-2">
+                                    <a href="#">
+                                        <img src="Assets/Images/card/tg.png" alt="" class="w-6">
+                                    </a>
+                                    <a href="#">
+                                        <img src="Assets/Images/card/whatsapp.png" alt="" class="w-6">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide flex flex-col gap-4 p-3.5 bg-white rounded-[20px] h-fit">
+                            <div class="relative rounded-[20px] overflow-hidden border border-[#EDCEBF]/50">
+                                <a href="card_page.html" class="w-full">
+                                    <img src="Assets/Images/card/main.png" alt="" class="w-full">
+                                </a>
+                                <button class="absolute left-0 top-0 bg-[#EDCEBF] px-4 py-1.5 rounded-md rounded-br-[20px]">
+                                    <img src="Assets/Images/card/video.png" alt="">
+                                </button>
+                                <div class="absolute left-0 bottom-0 bg-white px-4 py-1.5 rounded-md rounded-tr-[20px]">
+                                    <img src="Assets/Images/card/check.png" alt="">
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <a href="card_page.html" class="text-xl md:text-2xl xl:text-3xl pr-12 border-b border-[#737373] w-fit">Полина</a>
+                                <button>
+                                    <img src="Assets/Images/card/star.png" alt="">
+                                </button>
+                            </div>
+                            <div class="grid grid-cols-4 gap-5 text-base leading-4">
+                                <p class="rounded-[10px] border border-[#EDCEBF] py-1 px-3 text-center">23 <br> года</p>
+                                <p class="rounded-[10px] border border-[#EDCEBF] py-1 px-3 text-center">55 <br> кг</p>
+                                <p class="rounded-[10px] border border-[#EDCEBF] py-1 px-3 text-center">170 <br> см</p>
+                                <p class="rounded-[10px] border border-[#EDCEBF] py-1 px-3 text-center">3 <br> р-р</p>
+                            </div>
+                            <div class="flex flex-col w-full tab-main">
+                                <ul class="flex items-center justify-between text-base">
+                                    <li class="flex items-center justify-center text-center w-2/5 border-t border-x border-[#EDCEBF] bg-[#EDCEBF] text-white rounded-t-[10px] tab-toggler"><a href="" class="py-3.5 w-full">Апартаменты</a></li>
+                                    <li class="flex items-center justify-center text-center w-2/5 border-t border-x border-[#EDCEBF] bg-[#EDCEBF] text-white rounded-t-[10px] tab-toggler"><a href="" class="py-3.5 w-full">На выезд</a></li>
+                                </ul>
+                                <div class="flex items-center gap-4 justify-between px-4 py-2 text-center text-md md:text-lg xl:text-xl border border-[#EDCEBF] rounded-b-[20px] tab-card">
+                                    <div class="flex flex-col gap-2 items-center">
+                                        <p class="text-[#737373]">1 час:</p>
+                                        <p>4000</p>
+                                    </div>
+                                    <div class="w-px h-14 bg-[#737373]"></div>
+                                    <div class="flex flex-col gap-2 items-center">
+                                        <p class="text-[#737373]">2 часа:</p>
+                                        <p>8000</p>
+                                    </div>
+                                    <div class="w-px h-14 bg-[#737373]"></div>
+                                    <div class="flex flex-col gap-2 items-center">
+                                        <p class="text-[#737373]">Ночь:</p>
+                                        <p>20000</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-4 justify-between px-4 py-2 text-center text-md md:text-lg xl:text-xl border border-[#EDCEBF] rounded-b-[20px] tab-card">
+                                    <div class="flex flex-col gap-2 items-center">
+                                        <p class="text-[#737373]">1 час:</p>
+                                        <p>4002</p>
+                                    </div>
+                                    <div class="w-px h-14 bg-[#737373]"></div>
+                                    <div class="flex flex-col gap-2 items-center">
+                                        <p class="text-[#737373]">2 часа:</p>
+                                        <p>8002</p>
+                                    </div>
+                                    <div class="w-px h-14 bg-[#737373]"></div>
+                                    <div class="flex flex-col gap-2 items-center">
+                                        <p class="text-[#737373]">Ночь:</p>
+                                        <p>20002</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="flex items-center gap-2.5">
+                                <img src="Assets/Images/card/locate.png" alt="">
+                                <span class="text-[#B0B0B0] text-base md:text-lg xl:text-xl">м.Красногвардейская </span>
+                            </button>
+                            <div class="flex items-center justify-between p-3.5 text-base md:text-lg xl:text-xl rounded-[20px] border border-[#EDCEBF]">
+                                <a href="tel:+77011234567">+7 (701) 123 45 67</a>
+                                <div class="flex items-center gap-2">
+                                    <a href="#">
+                                        <img src="Assets/Images/card/tg.png" alt="" class="w-6">
+                                    </a>
+                                    <a href="#">
+                                        <img src="Assets/Images/card/whatsapp.png" alt="" class="w-6">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide flex flex-col gap-4 p-3.5 bg-white rounded-[20px] h-fit">
+                            <div class="relative rounded-[20px] overflow-hidden border border-[#EDCEBF]/50">
+                                <a href="card_page.html" class="w-full">
+                                    <img src="Assets/Images/card/main.png" alt="" class="w-full">
+                                </a>
+                                <button class="absolute left-0 top-0 bg-[#EDCEBF] px-4 py-1.5 rounded-md rounded-br-[20px]">
+                                    <img src="Assets/Images/card/video.png" alt="">
+                                </button>
+                                <div class="absolute left-0 bottom-0 bg-white px-4 py-1.5 rounded-md rounded-tr-[20px]">
+                                    <img src="Assets/Images/card/check.png" alt="">
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <a href="card_page.html" class="text-xl md:text-2xl xl:text-3xl pr-12 border-b border-[#737373] w-fit">Полина</a>
+                                <button>
+                                    <img src="Assets/Images/card/star.png" alt="">
+                                </button>
+                            </div>
+                            <div class="grid grid-cols-4 gap-5 text-base leading-4">
+                                <p class="rounded-[10px] border border-[#EDCEBF] py-1 px-3 text-center">23 <br> года</p>
+                                <p class="rounded-[10px] border border-[#EDCEBF] py-1 px-3 text-center">55 <br> кг</p>
+                                <p class="rounded-[10px] border border-[#EDCEBF] py-1 px-3 text-center">170 <br> см</p>
+                                <p class="rounded-[10px] border border-[#EDCEBF] py-1 px-3 text-center">3 <br> р-р</p>
+                            </div>
+                            <div class="flex flex-col w-full tab-main">
+                                <ul class="flex items-center justify-between text-base">
+                                    <li class="flex items-center justify-center text-center w-2/5 border-t border-x border-[#EDCEBF] bg-[#EDCEBF] text-white rounded-t-[10px] tab-toggler"><a href="" class="py-3.5 w-full">Апартаменты</a></li>
+                                    <li class="flex items-center justify-center text-center w-2/5 border-t border-x border-[#EDCEBF] bg-[#EDCEBF] text-white rounded-t-[10px] tab-toggler"><a href="" class="py-3.5 w-full">На выезд</a></li>
+                                </ul>
+                                <div class="flex items-center gap-4 justify-between px-4 py-2 text-center text-md md:text-lg xl:text-xl border border-[#EDCEBF] rounded-b-[20px] tab-card">
+                                    <div class="flex flex-col gap-2 items-center">
+                                        <p class="text-[#737373]">1 час:</p>
+                                        <p>4000</p>
+                                    </div>
+                                    <div class="w-px h-14 bg-[#737373]"></div>
+                                    <div class="flex flex-col gap-2 items-center">
+                                        <p class="text-[#737373]">2 часа:</p>
+                                        <p>8000</p>
+                                    </div>
+                                    <div class="w-px h-14 bg-[#737373]"></div>
+                                    <div class="flex flex-col gap-2 items-center">
+                                        <p class="text-[#737373]">Ночь:</p>
+                                        <p>20000</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-4 justify-between px-4 py-2 text-center text-md md:text-lg xl:text-xl border border-[#EDCEBF] rounded-b-[20px] tab-card">
+                                    <div class="flex flex-col gap-2 items-center">
+                                        <p class="text-[#737373]">1 час:</p>
+                                        <p>4002</p>
+                                    </div>
+                                    <div class="w-px h-14 bg-[#737373]"></div>
+                                    <div class="flex flex-col gap-2 items-center">
+                                        <p class="text-[#737373]">2 часа:</p>
+                                        <p>8002</p>
+                                    </div>
+                                    <div class="w-px h-14 bg-[#737373]"></div>
+                                    <div class="flex flex-col gap-2 items-center">
+                                        <p class="text-[#737373]">Ночь:</p>
+                                        <p>20002</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="flex items-center gap-2.5">
+                                <img src="Assets/Images/card/locate.png" alt="">
+                                <span class="text-[#B0B0B0] text-base md:text-lg xl:text-xl">м.Красногвардейская </span>
+                            </button>
+                            <div class="flex items-center justify-between p-3.5 text-base md:text-lg xl:text-xl rounded-[20px] border border-[#EDCEBF]">
+                                <a href="tel:+77011234567">+7 (701) 123 45 67</a>
+                                <div class="flex items-center gap-2">
+                                    <a href="#">
+                                        <img src="Assets/Images/card/tg.png" alt="" class="w-6">
+                                    </a>
+                                    <a href="#">
+                                        <img src="Assets/Images/card/whatsapp.png" alt="" class="w-6">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide flex flex-col gap-4 p-3.5 bg-white rounded-[20px] h-fit">
+                            <div class="relative rounded-[20px] overflow-hidden border border-[#EDCEBF]/50">
+                                <a href="card_page.html" class="w-full">
+                                    <img src="Assets/Images/card/main.png" alt="" class="w-full">
+                                </a>
+                                <button class="absolute left-0 top-0 bg-[#EDCEBF] px-4 py-1.5 rounded-md rounded-br-[20px]">
+                                    <img src="Assets/Images/card/video.png" alt="">
+                                </button>
+                                <div class="absolute left-0 bottom-0 bg-white px-4 py-1.5 rounded-md rounded-tr-[20px]">
+                                    <img src="Assets/Images/card/check.png" alt="">
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <a href="card_page.html" class="text-xl md:text-2xl xl:text-3xl pr-12 border-b border-[#737373] w-fit">Полина</a>
+                                <button>
+                                    <img src="Assets/Images/card/star.png" alt="">
+                                </button>
+                            </div>
+                            <div class="grid grid-cols-4 gap-5 text-base leading-4">
+                                <p class="rounded-[10px] border border-[#EDCEBF] py-1 px-3 text-center">23 <br> года</p>
+                                <p class="rounded-[10px] border border-[#EDCEBF] py-1 px-3 text-center">55 <br> кг</p>
+                                <p class="rounded-[10px] border border-[#EDCEBF] py-1 px-3 text-center">170 <br> см</p>
+                                <p class="rounded-[10px] border border-[#EDCEBF] py-1 px-3 text-center">3 <br> р-р</p>
+                            </div>
+                            <div class="flex flex-col w-full tab-main">
+                                <ul class="flex items-center justify-between text-base">
+                                    <li class="flex items-center justify-center text-center w-2/5 border-t border-x border-[#EDCEBF] bg-[#EDCEBF] text-white rounded-t-[10px] tab-toggler"><a href="" class="py-3.5 w-full">Апартаменты</a></li>
+                                    <li class="flex items-center justify-center text-center w-2/5 border-t border-x border-[#EDCEBF] bg-[#EDCEBF] text-white rounded-t-[10px] tab-toggler"><a href="" class="py-3.5 w-full">На выезд</a></li>
+                                </ul>
+                                <div class="flex items-center gap-4 justify-between px-4 py-2 text-center text-md md:text-lg xl:text-xl border border-[#EDCEBF] rounded-b-[20px] tab-card">
+                                    <div class="flex flex-col gap-2 items-center">
+                                        <p class="text-[#737373]">1 час:</p>
+                                        <p>4000</p>
+                                    </div>
+                                    <div class="w-px h-14 bg-[#737373]"></div>
+                                    <div class="flex flex-col gap-2 items-center">
+                                        <p class="text-[#737373]">2 часа:</p>
+                                        <p>8000</p>
+                                    </div>
+                                    <div class="w-px h-14 bg-[#737373]"></div>
+                                    <div class="flex flex-col gap-2 items-center">
+                                        <p class="text-[#737373]">Ночь:</p>
+                                        <p>20000</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-4 justify-between px-4 py-2 text-center text-md md:text-lg xl:text-xl border border-[#EDCEBF] rounded-b-[20px] tab-card">
+                                    <div class="flex flex-col gap-2 items-center">
+                                        <p class="text-[#737373]">1 час:</p>
+                                        <p>4002</p>
+                                    </div>
+                                    <div class="w-px h-14 bg-[#737373]"></div>
+                                    <div class="flex flex-col gap-2 items-center">
+                                        <p class="text-[#737373]">2 часа:</p>
+                                        <p>8002</p>
+                                    </div>
+                                    <div class="w-px h-14 bg-[#737373]"></div>
+                                    <div class="flex flex-col gap-2 items-center">
+                                        <p class="text-[#737373]">Ночь:</p>
+                                        <p>20002</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="flex items-center gap-2.5">
+                                <img src="Assets/Images/card/locate.png" alt="">
+                                <span class="text-[#B0B0B0] text-base md:text-lg xl:text-xl">м.Красногвардейская </span>
+                            </button>
+                            <div class="flex items-center justify-between p-3.5 text-base md:text-lg xl:text-xl rounded-[20px] border border-[#EDCEBF]">
+                                <a href="tel:+77011234567">+7 (701) 123 45 67</a>
+                                <div class="flex items-center gap-2">
+                                    <a href="#">
+                                        <img src="Assets/Images/card/tg.png" alt="" class="w-6">
+                                    </a>
+                                    <a href="#">
+                                        <img src="Assets/Images/card/whatsapp.png" alt="" class="w-6">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="w-10 h-10 flex items-center justify-center border border-[#EDCEBF] rounded-xl p-2 shrink-0 advice-next">
+                    <img src="Assets/Images/nav/left.svg" alt="" class="scale-[-1]">
+                </button>
+            </div>
+        </div>      
+    </main>
+
+    <footer class="w-full grid-container bg-[#EDCEBF] py-4 lg:py-7">
+        <div class="flex max-md:flex-col items-center justify-between gap-4">
+            <a href="index.html" class="flex items-center gap-2 md:gap-7 max-md:flex-col max-md:w-full">
+                <img src="Assets/Images/footer/logo.svg" alt="" class="w-10 md:w-12 xl:w-16">
+                <span class="text-lg md:text-xl xl:text-2xl">Название компании</span>
+            </a>
+            <a href="#" class="text-lg md:text-xl xl:text-2xl">ssylka-na-sajt.ru</a>
+        </div>
+    </footer>
+
+    <button id="to-top-button" onclick="goToTop()" class="hidden fixed z-[5] bottom-5 md:bottom-8 right-5 md:right-8 border-0 w-10 h-10 flex items-center justify-center">
+        <img src="Assets/Images/footer/arrow.svg" alt="">
+    </button>
     
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.min.js" integrity="sha256-sw0iNNXmOJbQhYFuC9OF2kOlD5KQKe1y5lfBn4C9Sjg=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="Assets/JS/main.js"></script>
 </body>
 </html>
