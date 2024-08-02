@@ -67,3 +67,14 @@ $(".tab-main").each(function(index) {
 
   $this.tabs();
 });
+
+
+/* search */
+$("#searchToggler").click(() => {
+  $("#search").removeClass("max-lg:-translate-y-[500px]")
+  $("#overlay").removeClass("hidden")
+})
+$("#searchClose").click(() => {
+  $("#search").addClass("max-lg:-translate-y-[500px]")
+  $("#overlay").addClass("hidden")
+})

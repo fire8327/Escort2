@@ -9,14 +9,25 @@
 </head>
 <body class="flex flex-col min-h-screen bg-[#EEE3DE87]">
     <header class="w-full py-4 lg:py-7 grid-container bg-white border-b border-[#EDCEBF]">
-        <div class="flex flex-col gap-1.5 w-full">
+        <div class="flex flex-col gap-1.5 w-full max-lg:relative">
             <div class="flex items-center justify-between w-full">
                 <a href="index.html" class="flex items-center gap-7">
                     <img src="Assets/Images/header/logo.png" alt="" class="w-10 md:w-12 xl:w-16">
                     <span class="max-lg:hidden text-xl md:text-2xl xl:text-3xl">Название компании</span>
                 </a>
+                <form id="search" action="#" class="max-lg:absolute max-lg:w-full max-lg:z-[4] lg:relative transition-all duration-500 max-lg:-translate-y-[500px]">
+                    <input type="text" class="w-full lg:w-[460px] text-base py-3.5 pl-7 pr-24 lg:pr-12 border border-[#EDCEBF] rounded-[20px]" placeholder="Поиск по имени, телефону, району, ...">
+                    <div class="flex items-center gap-4 absolute top-1/2 -translate-y-1/2 right-5">
+                        <button>
+                            <img src="Assets/Images/header/search.png" alt="" class="w-6">
+                        </button>
+                        <button id="searchClose" class="lg:hidden">
+                            <img src="Assets/Images/header/close.svg" alt="" class="w-7">
+                        </button>
+                    </div>
+                </form>
                 <div class="flex items-center gap-4 lg:hidden">
-                    <button>
+                    <button id="searchToggler">
                         <img src="Assets/Images/header/search.png" alt="" class="w-6">
                     </button>
                     <button class="flex flex-col gap-1">
@@ -29,6 +40,8 @@
             <p class="text-2xl md:text-3xl xl:text-4xl text-center lg:hidden">Название компании</p>
         </div>
     </header>
+
+    <div id="overlay" class="fixed inset-0 bg-black/30 z-[3] hidden lg:hidden"></div>
 
     <main class="grid-container w-full gap-y-14 md:gap-y-16 xl:gap-y-20 grow my-10">
         <div class="w-full p-4 rounded-xl bg-white border border-[#EDCEBF] flex flex-col gap-6 h-fit">
