@@ -679,6 +679,14 @@ video {
   left: 0px;
 }
 
+.left-2 {
+  left: 0.5rem;
+}
+
+.right-2 {
+  right: 0.5rem;
+}
+
 .right-4 {
   right: 1rem;
 }
@@ -699,18 +707,6 @@ video {
   top: 1rem;
 }
 
-.top-12 {
-  top: 3rem;
-}
-
-.left-2 {
-  left: 0.5rem;
-}
-
-.right-2 {
-  right: 0.5rem;
-}
-
 .isolate {
   isolation: isolate;
 }
@@ -719,20 +715,20 @@ video {
   isolation: auto;
 }
 
-.z-\[3\] {
-  z-index: 3;
-}
-
-.z-\[5\] {
-  z-index: 5;
-}
-
 .z-\[1\] {
   z-index: 1;
 }
 
 .z-\[2\] {
   z-index: 2;
+}
+
+.z-\[3\] {
+  z-index: 3;
+}
+
+.z-\[5\] {
+  z-index: 5;
 }
 
 .float-start {
@@ -912,10 +908,6 @@ video {
   height: 100%;
 }
 
-.\!h-full {
-  height: 100% !important;
-}
-
 .min-h-screen {
   min-height: 100vh;
 }
@@ -934,14 +926,6 @@ video {
 
 .w-7 {
   width: 1.75rem;
-}
-
-.w-\[45\%\] {
-  width: 45%;
-}
-
-.w-\[55\%\] {
-  width: 55%;
 }
 
 .w-\[this-is\\\\\] {
@@ -1895,10 +1879,6 @@ video {
   border-radius: 0.75rem;
 }
 
-.rounded-2xl {
-  border-radius: 1rem;
-}
-
 .rounded-b {
   border-bottom-right-radius: 0.25rem;
   border-bottom-left-radius: 0.25rem;
@@ -2237,11 +2217,6 @@ video {
 .px-5 {
   padding-left: 1.25rem;
   padding-right: 1.25rem;
-}
-
-.px-7 {
-  padding-left: 1.75rem;
-  padding-right: 1.75rem;
 }
 
 .py-1 {
@@ -3103,34 +3078,34 @@ body {
     width: 80%;
   }
 
-  .lg\:w-\[460px\] {
-    width: 460px;
+  .lg\:w-7 {
+    width: 1.75rem;
   }
 
   .lg\:w-\[45\%\] {
     width: 45%;
   }
 
-  .lg\:w-\[55\%\] {
-    width: 55%;
+  .lg\:w-\[460px\] {
+    width: 460px;
   }
 
-  .lg\:w-7 {
-    width: 1.75rem;
+  .lg\:w-\[55\%\] {
+    width: 55%;
   }
 
   .lg\:items-center {
     align-items: center;
   }
 
-  .lg\:py-7 {
-    padding-top: 1.75rem;
-    padding-bottom: 1.75rem;
-  }
-
   .lg\:px-7 {
     padding-left: 1.75rem;
     padding-right: 1.75rem;
+  }
+
+  .lg\:py-7 {
+    padding-top: 1.75rem;
+    padding-bottom: 1.75rem;
   }
 
   .lg\:pr-12 {
@@ -3159,6 +3134,10 @@ body {
 
   .xl\:w-16 {
     width: 4rem;
+  }
+
+  .xl\:w-9 {
+    width: 2.25rem;
   }
 
   .xl\:grid-cols-3 {
