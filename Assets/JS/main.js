@@ -32,6 +32,9 @@ const swiper2 = new Swiper('.advice-slider', {
     prevEl: '.advice-prev',
   },
   spaceBetween: 20,
+  pagination: {
+    el: '.swiper-pagination',
+  },
   breakpoints: {
       320: {
         slidesPerView: 1,
