@@ -699,6 +699,18 @@ video {
   top: 1rem;
 }
 
+.top-12 {
+  top: 3rem;
+}
+
+.left-2 {
+  left: 0.5rem;
+}
+
+.right-2 {
+  right: 0.5rem;
+}
+
 .isolate {
   isolation: isolate;
 }
@@ -713,6 +725,14 @@ video {
 
 .z-\[5\] {
   z-index: 5;
+}
+
+.z-\[1\] {
+  z-index: 1;
+}
+
+.z-\[2\] {
+  z-index: 2;
 }
 
 .float-start {
@@ -867,6 +887,10 @@ video {
   display: none;
 }
 
+.aspect-square {
+  aspect-ratio: 1 / 1;
+}
+
 .h-1 {
   height: 0.25rem;
 }
@@ -882,6 +906,14 @@ video {
 .h-fit {
   height: -moz-fit-content;
   height: fit-content;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.\!h-full {
+  height: 100% !important;
 }
 
 .min-h-screen {
@@ -902,6 +934,14 @@ video {
 
 .w-7 {
   width: 1.75rem;
+}
+
+.w-\[45\%\] {
+  width: 45%;
+}
+
+.w-\[55\%\] {
+  width: 55%;
 }
 
 .w-\[this-is\\\\\] {
@@ -927,22 +967,6 @@ video {
 
 .w-px {
   width: 1px;
-}
-
-.w-\[55\] {
-  width: 55;
-}
-
-.w-\[55\%\] {
-  width: 55%;
-}
-
-.w-\[45\%\] {
-  width: 45%;
-}
-
-.w-4 {
-  width: 1rem;
 }
 
 .flex-shrink {
@@ -1511,6 +1535,10 @@ video {
   gap: 0.625rem;
 }
 
+.gap-3\.5 {
+  gap: 0.875rem;
+}
+
 .gap-4 {
   gap: 1rem;
 }
@@ -1525,14 +1553,6 @@ video {
 
 .gap-7 {
   gap: 1.75rem;
-}
-
-.gap-3 {
-  gap: 0.75rem;
-}
-
-.gap-3\.5 {
-  gap: 0.875rem;
 }
 
 .gap-y-14 {
@@ -1873,6 +1893,10 @@ video {
 
 .rounded-xl {
   border-radius: 0.75rem;
+}
+
+.rounded-2xl {
+  border-radius: 1rem;
 }
 
 .rounded-b {
@@ -3025,10 +3049,6 @@ body {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .md\:grid-cols-3 {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
   .md\:gap-7 {
     gap: 1.75rem;
   }
@@ -3087,6 +3107,18 @@ body {
     width: 460px;
   }
 
+  .lg\:w-\[45\%\] {
+    width: 45%;
+  }
+
+  .lg\:w-\[55\%\] {
+    width: 55%;
+  }
+
+  .lg\:w-7 {
+    width: 1.75rem;
+  }
+
   .lg\:items-center {
     align-items: center;
   }
@@ -3096,12 +3128,27 @@ body {
     padding-bottom: 1.75rem;
   }
 
+  .lg\:px-7 {
+    padding-left: 1.75rem;
+    padding-right: 1.75rem;
+  }
+
   .lg\:pr-12 {
     padding-right: 3rem;
   }
 
   .lg\:text-center {
     text-align: center;
+  }
+
+  .lg\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .lg\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
   }
 }
 
@@ -3118,12 +3165,12 @@ body {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
-  .xl\:gap-12 {
-    gap: 3rem;
-  }
-
   .xl\:gap-10 {
     gap: 2.5rem;
+  }
+
+  .xl\:gap-12 {
+    gap: 3rem;
   }
 
   .xl\:gap-y-20 {

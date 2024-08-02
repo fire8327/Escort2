@@ -85,28 +85,75 @@
                 <p class="border-b border-[#EDCEBF] text-[#EDCEBF]">Полина</p>
             </div>
         </div>
-        <div class="flex flex-col gap-7 px-7 py-4 bg-white rounded-[20px] relative lg:items-center">
+        <div class="flex flex-col gap-7 px-4 lg:px-7 py-4 bg-white rounded-[20px] relative lg:items-center">
             <h1 class="text-2xl md:text-3xl xl:text-4xl max-lg:pr-12 border-b border-[#737373] w-fit lg:w-1/2 lg:text-center">Полина</h1>
             <button class="absolute top-4 right-4 md:right-8 xl:right-11">
                 <img src="Assets/Images/card/star.png" alt="">
             </button>
             <div class="flex max-lg:flex-col gap-7 w-full">
-                <div class="flex flex-col gap-3.5 w-[55%]"></div>
-                <div class="flex flex-col gap-6 md:gap-8 xl:gap-10 w-[45%]">
-                    <div class="grid grid-cols-4 gap-5 text-xl md:text-2xl xl:text-3xl leading-4">
+                <div class="flex flex-col gap-3.5 w-full lg:w-[55%]">
+                    <div class="relative w-full overflow-hidden rounded-[20px] border border-[#EDCEBF]/50">
+                        <div class="swiper girlPage-slider">
+                            <div class="swiper-wrapper h-full">
+                                <div class="swiper-slide">
+                                    <img src="Assets/Images/card/main.png" alt="" class="w-full h-full object-cover aspect-square">                                    
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="Assets/Images/card/1.png" alt="" class="w-full h-full object-cover aspect-square">                                    
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="Assets/Images/card/2.png" alt="" class="w-full h-full object-cover aspect-square">                                    
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="Assets/Images/card/3.png" alt="" class="w-full h-full object-cover aspect-square">                                    
+                                </div>
+                            </div>
+                        </div>
+                        <button class="absolute left-0 top-0 bg-[#EDCEBF] px-4 py-1.5 rounded-md rounded-br-[20px] z-[1]">
+                            <img src="Assets/Images/card/video.png" alt="">
+                        </button>
+                        <div class="absolute left-0 bottom-0 bg-white px-4 py-1.5 rounded-md rounded-tr-[20px] z-[1]">
+                            <img src="Assets/Images/card/check.png" alt="">
+                        </div>
+                        <button class="w-10 h-10 flex items-center justify-center border border-[#EDCEBF] rounded-xl p-2 shrink-0 girlPage-prev bg-white z-[2] absolute top-1/2 -translate-y-1/2 left-2">
+                            <img src="Assets/Images/nav/left.svg" alt="">
+                        </button>
+                        <button class="w-10 h-10 flex items-center justify-center border border-[#EDCEBF] rounded-xl p-2 shrink-0 girlPage-next bg-white z-[2] absolute top-1/2 -translate-y-1/2 right-2">
+                            <img src="Assets/Images/nav/left.svg" alt="" class="scale-[-1]">
+                        </button>
+                    </div>
+                    <div class="swiper girlPage-slider2 w-full">
+                        <div class="swiper-wrapper w-full">
+                            <div class="swiper-slide">
+                                <img src="Assets/Images/card/main.png" alt="" class="w-full h-full rounded-[20px] object-cover">                                    
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="Assets/Images/card/1.png" alt="" class="w-full h-full rounded-[20px] object-cover">                                    
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="Assets/Images/card/2.png" alt="" class="w-full h-full rounded-[20px] object-cover">                                    
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="Assets/Images/card/3.png" alt="" class="w-full h-full rounded-[20px] object-cover">                                    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-6 md:gap-8 xl:gap-10 w-full lg:w-[45%]">
+                    <div class="grid grid-cols-4 gap-5 text-base md:text-lg lg:text-2xl xl:text-3xl leading-4">
                         <p class="rounded-[10px] border border-[#EDCEBF] py-1 px-3 text-center">23 <br> года</p>
                         <p class="rounded-[10px] border border-[#EDCEBF] py-1 px-3 text-center">55 <br> кг</p>
                         <p class="rounded-[10px] border border-[#EDCEBF] py-1 px-3 text-center">170 <br> см</p>
                         <p class="rounded-[10px] border border-[#EDCEBF] py-1 px-3 text-center">3 <br> р-р</p>
                     </div>
-                    <div class="flex items-center justify-between p-3.5 text-lg md:text-xl xl:text-2xl rounded-[20px] border border-[#EDCEBF]">
+                    <div class="flex items-center justify-between p-3.5 text-base md:text-lg lg:text-xl xl:text-2xl rounded-[20px] border border-[#EDCEBF]">
                         <a href="tel:+77011234567">+7 (701) 123 45 67</a>
                         <div class="flex items-center gap-2">
                             <a href="#">
-                                <img src="Assets/Images/card/tg.png" alt="" class="w-7">
+                                <img src="Assets/Images/card/tg.png" alt="" class="w-6 lg:w-7">
                             </a>
                             <a href="#">
-                                <img src="Assets/Images/card/whatsapp.png" alt="" class="w-7">
+                                <img src="Assets/Images/card/whatsapp.png" alt="" class="w-6 lg:w-7">
                             </a>
                         </div>
                     </div>

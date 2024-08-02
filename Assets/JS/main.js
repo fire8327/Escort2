@@ -47,6 +47,26 @@ const swiper2 = new Swiper('.advice-slider', {
       }
   }
 });
+/* girlPage-slider */
+const swiper3 = new Swiper('.girlPage-slider2', {
+  loop: true,
+  spaceBetween: 10,
+  slidesPerView: 3,
+  freeMode: true,
+  watchSlidesProgress: true
+});
+const swiper4 = new Swiper('.girlPage-slider', {
+  loop: true,
+  spaceBetween: 10,
+  slidesPerView: 1,
+  navigation: {
+    nextEl: '.girlPage-next',
+    prevEl: '.girlPage-prev',
+  },
+  thumbs: {
+    swiper: swiper3,
+  }
+});
 
 
 /* back to top */
