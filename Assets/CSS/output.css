@@ -929,6 +929,22 @@ video {
   width: 1px;
 }
 
+.w-\[55\] {
+  width: 55;
+}
+
+.w-\[55\%\] {
+  width: 55%;
+}
+
+.w-\[45\%\] {
+  width: 45%;
+}
+
+.w-4 {
+  width: 1rem;
+}
+
 .flex-shrink {
   flex-shrink: 1;
 }
@@ -1509,6 +1525,14 @@ video {
 
 .gap-7 {
   gap: 1.75rem;
+}
+
+.gap-3 {
+  gap: 0.75rem;
+}
+
+.gap-3\.5 {
+  gap: 0.875rem;
 }
 
 .gap-y-14 {
@@ -2867,8 +2891,8 @@ body {
 }
 
 .swiper-pagination-bullet-active {
-  --tw-bg-opacity: 1;
-  background-color: rgb(237 206 191 / var(--tw-bg-opacity));
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(237 206 191 / var(--tw-bg-opacity)) !important;
 }
 
 @media (min-width: 640px) {
@@ -3001,6 +3025,10 @@ body {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .md\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
   .md\:gap-7 {
     gap: 1.75rem;
   }
@@ -3059,6 +3087,10 @@ body {
     width: 460px;
   }
 
+  .lg\:items-center {
+    align-items: center;
+  }
+
   .lg\:py-7 {
     padding-top: 1.75rem;
     padding-bottom: 1.75rem;
@@ -3066,6 +3098,10 @@ body {
 
   .lg\:pr-12 {
     padding-right: 3rem;
+  }
+
+  .lg\:text-center {
+    text-align: center;
   }
 }
 
@@ -3084,6 +3120,10 @@ body {
 
   .xl\:gap-12 {
     gap: 3rem;
+  }
+
+  .xl\:gap-10 {
+    gap: 2.5rem;
   }
 
   .xl\:gap-y-20 {
